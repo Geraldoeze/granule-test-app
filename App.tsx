@@ -18,7 +18,7 @@ import {
   View,
 } from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from './src/screens/HomeScreen';
+import MainStack from './src/navigation/MainStack';
 
 import SplashIntroScreen from './src/screens/SplashIntroScreen';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
@@ -35,21 +35,7 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        {/* <View>
-          <Text>React</Text>
-        </View> */}
-        <Stack.Navigator>
-        {/* <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{title: 'Welcome'}}
-          /> */}
-        <Stack.Screen
-            name="SplashIntroScreen"
-            component={SplashIntroScreen}
-            options={{title: 'Welcome'}}
-          />
-        </Stack.Navigator>
+        <MainStack />
       </NavigationContainer>
     </SafeAreaProvider>
   );

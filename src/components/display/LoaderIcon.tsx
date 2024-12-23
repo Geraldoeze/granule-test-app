@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { View, Animated, StyleSheet } from 'react-native';
+import React, {useEffect, useRef} from 'react';
+import {View, Animated, StyleSheet} from 'react-native';
 
 const LoaderIcon = () => {
   // Use useRef to persist the animated values between renders
@@ -12,7 +12,7 @@ const LoaderIcon = () => {
         toValue: 1,
         duration: 1000,
         useNativeDriver: true,
-      })
+      }),
     );
 
     animation.start();
@@ -35,6 +35,7 @@ const LoaderIcon = () => {
     inputRange: [0, 0.2, 0.4, 0.6, 0.8, 1],
     outputRange: [1, 1, 1, 0.6, 0.8, 1],
   });
+  
 
   return (
     <View style={styles.container}>
@@ -42,7 +43,7 @@ const LoaderIcon = () => {
         style={[
           styles.bar,
           {
-            transform: [{ scaleY: bar1Transform }],
+            transform: [{scaleY: bar1Transform}],
           },
         ]}
       />
@@ -50,7 +51,7 @@ const LoaderIcon = () => {
         style={[
           styles.bar,
           {
-            transform: [{ scaleY: bar2Transform }],
+            transform: [{scaleY: bar2Transform}],
           },
         ]}
       />
@@ -58,7 +59,7 @@ const LoaderIcon = () => {
         style={[
           styles.bar,
           {
-            transform: [{ scaleY: bar3Transform }],
+            transform: [{scaleY: bar3Transform}],
           },
         ]}
       />
@@ -68,8 +69,8 @@ const LoaderIcon = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: 45,
-    height: 45,
+    width: 25,
+    height: 30,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
@@ -77,8 +78,7 @@ const styles = StyleSheet.create({
   bar: {
     width: '20%',
     height: '100%',
-    backgroundColor: '#FEF7DC',
-    opacity: 3
+    backgroundColor: '#FEF7DC4D',
   },
 });
 

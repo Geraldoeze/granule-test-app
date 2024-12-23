@@ -1,11 +1,13 @@
 import React from 'react';
 // import PrimaryView from '../../components/display/PrimaryView';
-import {Text, View} from 'react-native';
+import {View, Image, Text} from 'react-native';
 import PrimaryView from '../../components/display/PrimaryView';
-
-// import LoaderIcon from '../../components/display/LoaderIcon';
+import {fontFamily} from '../../constants/fonts';
+import {useTheme} from '@react-native-material/core';
 
 const SplashIntroScreen = () => {
+  const theme = useTheme();
+
   return (
     <PrimaryView
       style={{
@@ -14,12 +16,7 @@ const SplashIntroScreen = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <View style={{flexDirection: 'column', alignItems: 'center'}}>
-        <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <Text>Splash</Text>
-        </View>
-        {/* <LoaderIcon /> */}
-      </View>
+      <Text style={{fontSize: 30, fontFamily: "Outfit-Black"}}>Flexibility with ease</Text>
     </PrimaryView>
   );
 };
